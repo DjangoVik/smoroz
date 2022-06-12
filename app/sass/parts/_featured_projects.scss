@@ -1,0 +1,145 @@
+.featured_projects {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 140px;
+
+    &_wrapper {
+        width: 100%;
+        margin-bottom: 48px;
+    }
+
+    .accordion_item {
+        width: 100%;
+        position: relative;
+
+        &:last-of-type {
+            border-bottom: 1px solid $gdark;
+        }
+
+        &--toggle {
+            padding: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid $gdark;
+            cursor: pointer;
+            position: relative;
+            transition: 0.3s ease;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 50px;
+                width: 18px;
+                height: 18px;
+                background-image: url(../img/icons/plus.svg);
+                background-position: center;
+                background-size: 18px;
+                background-repeat: no-repeat;
+            }
+
+            .preview {
+                position: absolute;
+                width: 270px;
+                height: 188px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                overflow: hidden;
+                transform: rotate(-30deg) scale(0.6);
+                transition: 0.3s ease;
+                right: 100%;
+                opacity: 0;
+                z-index: 1;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            &:hover {
+                background-color: $dark;
+                .preview {
+                    transform: rotate(-7deg) scale(0.9);
+                    right: 110%;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &--title {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--content {
+            padding: 0 23px;
+            padding-bottom: 64px;
+            padding-top: 16px;
+            width: 100%;
+
+            &-wrap {
+                display: flex;
+                align-items: flex-end;
+
+                .image {
+                    flex: 0 0 60%;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .text {
+                    flex: 0 0 40%;
+                    padding-left: 48px;
+
+                    p {
+                        font-family: $ttpro;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 1.5;
+                        font-feature-settings: 'liga' off;
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            background-color: $dark;
+            .accordion_item--toggle {
+                .preview {
+                    transform: rotate(-20deg) scale(0.6);
+                    transition: 0.2s ease;
+                    right: 100%;
+                    opacity: 0;
+                }
+                &::after {
+                    background-image: url(../img/icons/minus.svg);
+                }
+            }
+        }
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        margin-bottom: 24px;
+    }
+}

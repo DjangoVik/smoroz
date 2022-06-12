@@ -1,0 +1,35 @@
+@import '_default';
+@import '_fonts';
+@import '_vars';
+
+body {
+	color: #fff;
+	font-size: 16px;
+	font-family: $ttpro;
+	font-weight: normal;
+	font-style: normal;
+	background-color: $bg;
+}
+
+.box {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 44px;
+}
+
+main {
+	position: relative;
+	overflow: hidden;
+}
+
+@import 'parts/header';
+@import 'parts/hero';
+@import 'parts/pros';
+@import 'parts/featured_projects';
+@import 'parts/offwork';
+@import 'parts/form_section';
+@import 'parts/not_found';
+@import 'parts/footer';
+
+@import '_media';

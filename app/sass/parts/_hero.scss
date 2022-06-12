@@ -1,0 +1,72 @@
+.hero {
+    padding-bottom: 65px;
+
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    &_title {
+        max-width: 415px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 145px;
+
+        h1 {
+            font-family: $ttpro;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 102px;
+            line-height: 1.1;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+
+            span {
+                color: $dorange;
+            }
+        }
+        a {
+            margin-left: auto;
+        }
+    }
+
+    &_text {
+        font-size: 21px;
+        line-height: 34px;
+        color: $glight;
+        max-width: 375px;
+        margin-left: 12%;
+        width: 100%;
+        font-feature-settings: 'liga' off;
+    }
+
+    &_features {
+        display: flex;
+        width: 100%;
+
+        &-item {
+            
+        }
+    }
+
+    &_image {
+        position: absolute;
+        right: -15%;
+        bottom: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 50%;
+            width: 100%;
+            left: 0;
+            bottom: -65px;
+            background: linear-gradient(180deg, rgba(30, 30, 30, 0) 32.39%, #1E1E1E 69.36%);
+        }
+    }
+}

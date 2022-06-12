@@ -1,0 +1,52 @@
+.pros {
+    padding-bottom: 95px;
+    h3 {
+        max-width: 400px;
+        margin-left: 41%;
+        color: $glight;
+        margin-bottom: 64px;
+        position: relative;
+
+        span {
+            color: #fff;
+        }
+    }
+    &_wrapper {
+        max-width: 495px;
+        margin-left: 41%;
+        display: block;
+    }
+    &_items {
+        max-width: 100%;
+        padding-top: 64px;
+        border-top: 1px solid $gdark;
+        position: relative;
+        margin-bottom: 16px;
+        display: block;
+
+        &-item {
+            position: relative;
+            font-family: $ttpro;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 1.4;
+            font-feature-settings: 'liga' off;
+            color: #FFFFFF;
+            margin-bottom: 32px;
+            display: inline-block;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 14px;
+                height: 9px;
+                background-image: url(../img/icons/check-arrow.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                left: -40px;
+                top: 10px;
+            }
+        }
+    }
+}
