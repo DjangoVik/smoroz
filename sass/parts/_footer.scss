@@ -1,0 +1,124 @@
+footer {
+    .box {
+        border-top: 1px solid $gdark;
+        padding: 32px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .mailto {
+            display: inline-block;
+            font-family: $ttpro;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            font-feature-settings: 'liga' off;
+            color: #fff;
+            padding: 4px 0;
+            border-bottom: 1px solid $gdark;
+
+            &:hover {
+                border-color: $orange;
+            }
+
+            &:active {
+                border-color: $dorange;
+            }
+        }
+
+        .copyright {
+            font-family: $ttpro;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.4;
+            font-feature-settings: 'liga' off;
+            color: #fff;
+            padding: 4px 0;
+            margin-left: auto;
+        }
+
+        .footer_nav {
+            display: flex;
+            align-items: flex-start;
+
+            li {
+                margin-left: 30px;
+                position: relative;
+
+                a {
+                    display: inline-block;
+                    padding: 4px 0;
+                    font-family: $ttpro;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.4;
+                    font-feature-settings: 'liga' off;
+                    color: #fff;
+                    border-bottom: 1px solid $gdark;
+                    position: relative;
+
+                    &:hover {
+                        border-color: $orange;
+                    }
+
+                    &:active {
+                        border-color: $dorange;
+                    }
+
+                    &::before {
+                        content: '•';
+                        position: absolute;
+                        left: -17px;
+                        font-family: $ttpro;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 1.4;
+                        font-feature-settings: 'liga' off;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal {
+    padding: 48px;
+    max-width: 935px;
+    width: 90%;
+
+    .fancybox-close-small {
+        color: #000;
+        right: 30px;
+        top: 30px;
+    }
+
+    &_title {
+        color: #000;
+        margin-bottom: 24px;
+    }
+
+    &_content {
+        font-family: $ttpro;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        font-feature-settings: 'liga' off;
+        color: $dark;
+        max-width: 90%;
+        margin-bottom: 24px;
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        ol {
+            padding-left: 20px;
+            list-style: decimal;
+        }
+    }
+}

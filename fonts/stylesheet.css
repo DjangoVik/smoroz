@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'SFProText';
+    src: url('SFProText-Semibold.woff2') format('woff2'),
+        url('SFProText-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Bold.woff2') format('woff2'),
+        url('TTNorms-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Italic.woff2') format('woff2'),
+        url('TTNorms-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Light.woff2') format('woff2'),
+        url('TTNorms-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Medium.woff2') format('woff2'),
+        url('TTNorms-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms';
+    src: url('TTNorms-Regular.woff2') format('woff2'),
+        url('TTNorms-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
