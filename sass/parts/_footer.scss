@@ -84,6 +84,67 @@ footer {
             }
         }
     }
+
+    @include desktop-md {
+        .box {
+            padding: 28px 40px;
+        }
+    }
+
+    @include tablet-md {
+        .box {
+            padding: 22px 24px;
+            flex-wrap: wrap;
+            .copyright {
+                order: 1;
+                width: 100%;
+                margin-left: 0;
+            }
+            .mailto {
+                order: 2;
+            }
+            .footer_nav {
+                order: 3;
+                width: 100%;
+                li {
+                    margin-left: 0;
+                    margin-right: 30px;
+                    &:first-child {
+                        a {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile-md {
+        .box {
+            .copyright {
+                margin-bottom: 12px;
+                font-size: 14px;
+            }
+            .footer_nav {
+                flex-direction: column;
+                li {
+                    margin-bottom: 12px;
+                    a {
+                        font-size: 14px;
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .mailto {
+                margin-bottom: 30px;
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 .modal {
@@ -120,5 +181,29 @@ footer {
             padding-left: 20px;
             list-style: decimal;
         }
+    }
+
+    @include mobile-sm {
+        padding: 25px 16px;
+        width: 100%;
+        &_title {
+            font-size: 24px;
+            margin-bottom: 32px;
+        }
+        &_content {
+            font-size: 14px;
+            width: 100%;
+            max-width: 100%;
+        }
+        .fancybox-close-small {
+            right: 6px;
+            top: 20px;
+        }
+    }
+}
+
+@include mobile-sm {
+    .fancybox-slide--html {
+        padding: 0;
     }
 }

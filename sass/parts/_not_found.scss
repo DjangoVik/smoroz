@@ -24,4 +24,13 @@
         margin-top: 44px;
         margin-bottom: 68px;
     }
+
+    @include mobile-sm {
+        padding-top: 45px;
+        h1 {
+            font-size: 72px;
+            line-height: 1.2;
+            max-width: 188px;
+        }
+    }
 }

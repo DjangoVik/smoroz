@@ -99,6 +99,8 @@ function accordionInit(accordion) {
   if (accordionWrapper.length) {
     let accItem = accordionWrapper.find('.accordion_item .accordion_item--toggle');
     accItem.next().hide();
+    accItem.first().parent().addClass('active');
+    accItem.first().next().slideDown();
     accItem.click(function (e) { 
       e.preventDefault();
       $(this).parent().toggleClass('active');

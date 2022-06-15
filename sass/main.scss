@@ -16,6 +16,14 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 44px;
+
+	@include tablet-md {
+		padding: 0 24px;
+	}
+
+	@include mobile-sm {
+		padding: 0 16px;
+	}
 }
 
 main {

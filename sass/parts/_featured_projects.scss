@@ -53,6 +53,7 @@
                 right: 100%;
                 opacity: 0;
                 z-index: 1;
+
                 img {
                     width: 100%;
                     height: 100%;
@@ -63,6 +64,7 @@
 
             &:hover {
                 background-color: $dark;
+
                 .preview {
                     transform: rotate(-7deg) scale(0.9);
                     right: 110%;
@@ -95,6 +97,7 @@
                     display: flex;
                     align-items: flex-start;
                     justify-content: center;
+
                     img {
                         width: 100%;
                     }
@@ -103,6 +106,7 @@
                 .text {
                     flex: 0 0 40%;
                     padding-left: 48px;
+                    max-width: calc(315px + 48px);
 
                     p {
                         font-family: $ttpro;
@@ -119,6 +123,7 @@
 
         &.active {
             background-color: $dark;
+
             .accordion_item--toggle {
                 .preview {
                     transform: rotate(-20deg) scale(0.6);
@@ -126,6 +131,7 @@
                     right: 100%;
                     opacity: 0;
                 }
+
                 &::after {
                     background-image: url(../img/icons/minus.svg);
                 }
@@ -141,5 +147,83 @@
 
     .btn {
         margin-bottom: 24px;
+    }
+
+    @include desktop-md {
+        .accordion_item {
+            &--toggle {
+                padding: 25px 35px;
+                font-size: 36px;
+
+                .preview {
+                    width: 200px;
+                    height: 132px;
+                }
+            }
+        }
+    }
+
+    @include desktop-sm {
+        .accordion_item {
+            &--toggle {
+                font-size: 30px;
+            }
+            &--content {
+                &-wrap {
+                    .image {
+                        flex: 0 0 55%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include tablet-md {
+        .accordion_item {
+            &--toggle {
+                .preview {
+                    display: none !important;
+                }
+            } 
+        }
+    }
+
+    @include mobile-md {
+        .box {
+            align-items: flex-start;
+        }
+        .accordion_item {
+            &--toggle {
+                justify-content: flex-start;
+                padding: 25px 16px;
+                font-size: 24px;
+                padding-right: 45px;
+                &::after {
+                    right: 18px;
+                }
+            }
+            &--content {
+                padding-bottom: 30px;
+                &-wrap {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .image {
+                        flex: 0 0 auto;
+                        width: 100%;
+                        margin-bottom: 24px;
+                    }
+                    .text {
+                        flex: 0 0 auto;
+                        width: 100%;
+                        padding-left: 0;
+                        max-width: 315px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile-sm {
+        padding-bottom: 80px;
     }
 }

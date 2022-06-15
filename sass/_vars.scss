@@ -22,6 +22,30 @@ $green: #19654F;
 $sfpro: 'SFProText';
 $ttpro: 'TT Norms';
 
+@mixin desktop-md {
+	@media (max-width: 1440px) { @content; }
+}
+
+@mixin desktop-sm {
+	@media (max-width: 1200px) { @content; }
+}
+
+@mixin tablet-md {
+	@media (max-width: 1024px) { @content; }
+}
+
+@mixin tablet-sm {
+	@media (max-width: 768px) { @content; }
+}
+
+@mixin mobile-md {
+	@media (max-width: 640px) { @content; }
+}
+
+@mixin mobile-sm {
+	@media (max-width: 480px) { @content; }
+}
+
 .headingComponent {
     font-family: $ttpro;
     font-style: normal;
@@ -80,11 +104,34 @@ h5 {
     &:active {
         border-color: $dorange;
     }
+
+    @include desktop-sm {
+        flex: 0 0 140px;
+        height: 140px;
+        padding: 26px 20px;
+        h5 {
+            font-size: 20px;
+        }
+    }
+
+    @include tablet-md {
+        flex: 0 0 120px;
+        height: 120px;
+        padding: 22px 18px;
+        margin-right: 18px;
+    }
+
+    @include mobile-md {
+        flex: 0 0 135px;
+        height: 135px;
+        padding: 16px;
+        margin-right: 12px;
+    }
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 15px 24px;
     background: $dark;
     border: 1px solid $gdark;
     border-radius: 50px;
@@ -222,6 +269,10 @@ h5 {
         }
 
     }
+
+    @include mobile-sm {
+        font-size: 14px;
+    }
 }
 
 .link {
@@ -241,5 +292,39 @@ h5 {
     }
     &:active {
         border-color: $dorange;
+    }
+}
+
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUpFeat {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
     }
 }

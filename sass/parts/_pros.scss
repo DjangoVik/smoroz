@@ -49,4 +49,43 @@
             }
         }
     }
+
+    @include desktop-md {
+        h3 {
+            margin: 0 auto;
+            margin-bottom: 50px;
+            max-width: 495px;
+        }
+        &_wrapper {
+            margin: 0 auto;
+        }
+    }
+
+    @include desktop-sm {
+        h3 {
+            font-size: 44px;
+            margin-bottom: 35px;
+        }
+        &_items {
+            padding-top: 35px;
+        }
+    }
+
+    @include tablet-sm {
+        h3 {
+            font-size: 38px;
+        }
+        &_items {
+            &-item {
+                font-size: 18px;
+                width: 100%;
+            }
+        }
+    }
+
+    @include mobile-md {
+        &_items {
+            padding-left: 40px;
+        }
+    }
 }
